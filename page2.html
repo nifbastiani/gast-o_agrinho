@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu próprio orçamento</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><img id="logo" src="logo.jpeg" alt=""></a>
+        <span class="titulo_desktop">Organize e Gestione seu próprio dinheiro</span>
+        
+        <input type="checkbox" class="side-menu" id="side-menu">
+        <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">Page 2</a></li>
+                <li><a href="page3.html">Page 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <input type="checkbox" id="input-calcFin">
+    <div class="calc">
+        <label for="input-calcFin">
+            <h3>Porcentagem</h3>
+        </label>
+        <div class="calcF">
+            <div id="spTotal">
+                <span id="total">R$: 0,00</span>
+            </div>
+            Gasto Mensal: <input id="gasto" placeholder="média R$" type="text"><br>
+            Receita Mensal: <input id="receita" placeholder="média R$" type="text"><br>
+            <button onclick="calcularPorcentagem()">Calcular</button>
+            <div id="spLista">
+                <span id="listaMes"></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="calc">
+        <h1>Porcentagem</h1>
+        <div>
+          <label for="valor1">Valor da receita mensal:</label>
+          <input type="text" id="receita">
+        </div>
+        <div>
+          <label for="valor2">Valor do gasto mensal:</label>
+          <input type="text" id="gasto">
+        </div>  
+        <button id="calc button">Calcular</button>
+        <output></output>
+      </div>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>Meio de Gasto</th>
+            <th>Porcentagem</th>
+        </tr>
+        <tr>
+            <td class="editable"><input type="text" value="Mercado"></td>
+            <td class="editable"><input type="text" value="30%"></td>
+            
+        </tr>
+        <tr>
+            <td class="editable"><input type="text" value="Combustível"></td>
+            <td class="editable"><input type="text" value="16%"></td>
+            
+        </tr>
+        <tr>
+            <td class="editable"><input type="text" value="Farmácia"></td>
+            <td class="editable"><input type="text" value="10%"></td>
+           
+        </tr>
+    </table>
+    
+    
+    <script>
+        const editableCells = document.querySelectorAll('.editable');
+    
+        editableCells.forEach(cell => {
+            cell.addEventListener('click', () => {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = cell.textContent.trim();
+                cell.textContent = '';
+                cell.appendChild(input);
+                input.focus();
+    
+                input.addEventListener('blur', () => {
+                    cell.textContent = input.value;
+                });
+            });
+        });

@@ -7,46 +7,101 @@
 body {
     background-color: var(--fundo-claro);
     }
-    
-    footer {
-        background-color: var(--fundo-escuro);
-    }
     .conteudo {
         font-family:Georgia, 'Times New Roman', Times, serif;
-        padding: 5px 10px;
+        padding: 6px 12px;
+        color: black;
     }
     #logo {
-        width: 200px;
+        width: 100px;
         height: 100px;
     }
-    .inicio {
+    .rodape {
+        background-color: var(--fundo-escuro);
+        text-align-last: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        forced-color-adjust: white;
+    }
+    .home{
         background-color: var(--fundo-claro) ;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
-    .barra {
-        background-color:  var(--fundo-claro);
-        font-family:Georgia, 'Times New Roman', Times, serif;
-    }
-    .lado {
-        background-color:  var(--fundo-claro);
-        height: 10px;
-    }
-    .principal {
-        background-color: var(--fundo-claro);
-    }
-    .home1 {
+    
+    .page1 {
         background-color: var(--fundo-claro);
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
-    .home2 {
+    .page2 {
         background-color:  var(--fundo-claro);
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
-    .home3 {
+    .page3 {
         background-color: var(--fundo-claro);
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
     *{
         margin: 0;
         padding: 0;
+    }
+    
+    .calc {
+        background: rgb(78, 132, 168);
+        color: aliceblue;
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .calc input {
+        background: rgb(16, 28, 95);
+        color: rgb(216, 224, 250);
+        border-radius: 5px;
+        padding: 5px;
+    }
+    #spTotal {
+        background: rgb(0, 0, 0);
+        color: rgb(106, 201, 245);
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    .calc button {
+        background: rgb(8, 4, 66);
+        color: rgb(65, 66, 150);
+        border-radius: 10px;
+        padding: 5px;
+        margin-top: 10px;
+    }
+    .calc button:hover {
+        background: rgb(92, 144, 223);
+        color: rgb(231, 226, 236);
+        cursor: pointer;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 2px solid black;
+        border-spacing: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .editable {
+        cursor: pointer;
+    }
+
+    .editable input {
+        border: none;
+        width: 100%;
+        background-color: transparent;
     }

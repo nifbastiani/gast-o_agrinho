@@ -1,2 +1,2 @@
-# Gestão e Planejamento Financeiro
+# Gestão e Planejamento financeiro
 Nome: Nicole Fernandes Bastiani 29

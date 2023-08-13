@@ -1,9 +1,9 @@
 @import url(reset.css);
 @import url(estilo.css);
 :root{
-    --fundo-escuro: rgb(37, 65, 83);
-    --fundo-claro: rgb(183, 210, 226);
-    --fonte-clara: rgb(102, 134, 155);
+    --fundo-escuro: rgb(12, 12, 29);
+    --fundo-claro: rgb(231, 236, 240);
+    --fonte-clara: rgb(78, 132, 168);
     --fonte-escura: rgb(8, 10, 12);
     --hover-claro: rgb(162, 198, 221);
     --hover-escuro: rgb(23, 48, 63);
@@ -25,7 +25,7 @@ ul{
 .logo{
    display: inline-block;
    color: var(--fundo-escuro);
-   font-size: 32px;
+   font-size: 10px;
   
 }
 #logo{
