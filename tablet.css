@@ -1,0 +1,22 @@
+@media (min-width: 768px) {   
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--hover-claro);
+
+    }
+
+    .hamb{
+        display: none;
+    }
+}

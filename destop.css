@@ -1,0 +1,10 @@
+@media (min-width: 1024px) {
+    .título_desktop {
+        display: block;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
