@@ -21,17 +21,25 @@
             </ul>
         </nav>
     </header>
-    <input type="checkbox" id="input-calcFin">
+    <section class="conteudo">
+    <div class="home">
+        <br>
+        <h1 style="color: rgb(28, 52, 88) ;"> Faça seu próprio orçamento</h1>
+        <br>
+    <p>Uma das formas mais simples e fáceis de realizar seu próprio orçamento, para ter um bom controle de seus gastos, é calculando em porcentagem, para que seja mais fácil seu monitoramento.</p>
+    </div>
+
+</section>
     <div class="calc">
-        <label for="input-calcFin">
+        <label>
             <h3>Porcentagem</h3>
         </label>
         <div class="calcF">
             <div id="spTotal">
                 <span id="total">R$: 0,00</span>
             </div>
-            Gasto Mensal: <input id="gasto" placeholder="média R$" type="text"><br>
-            Receita Mensal: <input id="receita" placeholder="média R$" type="text"><br>
+            Receita Mensal: <input id="gasto" placeholder="média R$" type="text"><br>
+            Gasto Mensal: <input id="receita" placeholder="média R$" type="text"><br>
             <button onclick="calcularPorcentagem()">Calcular</button>
             <div id="spLista">
                 <span id="listaMes"></span>
@@ -39,20 +47,34 @@
         </div>
     </div>
     
-    <div class="calc">
-        <h1>Porcentagem</h1>
-        <div>
-          <label for="valor1">Valor da receita mensal:</label>
-          <input type="text" id="receita">
-        </div>
-        <div>
-          <label for="valor2">Valor do gasto mensal:</label>
-          <input type="text" id="gasto">
-        </div>  
-        <button id="calc button">Calcular</button>
-        <output></output>
-      </div>
+<script>
+    function calcularPorcentagem() {
+        const receita = parseFloat(document.getElementById("receita").value.replace(",", "."));
+        const gasto = parseFloat(document.getElementById("gasto").value.replace(",", "."));
 
+        if (isNaN(receita) || isNaN(gasto)) {
+            alert("Os valores inseridos devem ser números.");
+            return;
+        }
+
+        const porcentagem = (receita / gasto) * 100;
+
+        document.getElementById("total").textContent = `Porcentagem de gastos: ${porcentagem.toFixed(2)}%`;
+
+        const spLista = document.getElementById("spLista");
+        spLista.innerHTML = `Você gastou ${porcentagem.toFixed(2)}% da sua receita mensal.`;
+    }
+    
+</script>
+<section class="conteudo">
+    <div class="home">
+        <br>
+        <h1 style="color: rgb(28, 52, 88) ;"> Monte uma tabela</h1>
+        <br>
+    <p>Esse é um exemplo de como você pode organizar seus gastos em forma de tabela, é uma demonstração bem simples, mas você pode fazer tabelas diferentes, nas quais você pode dividir os gastos fixos dos váriaveis, entre outras possibilidades, à maneira que mais preferir, desde que seja de fácil utilidade.</p>
+    </div>
+<br>
+</section>
     <style>
         table {
             border-collapse: collapse;
@@ -93,8 +115,43 @@
             <td class="editable"><input type="text" value="10%"></td>
            
         </tr>
+        <tr>
+            <td class="editable"><input type="text" value=""></td>
+            <td class="editable"><input type="text" value=""></td>
+           
+        </tr>
+        <tr>
+            <td class="editable"><input type="text" value=""></td>
+            <td class="editable"><input type="text" value=""></td>
+           
+        </tr>
+        <tr>
+            <td class="editable"><input type="text" value=""></td>
+            <td class="editable"><input type="text" value=""></td>
+           
+        </tr>
+        <tr>
+            <td class="editable"><input type="text" value=""></td>
+            <td class="editable"><input type="text" value=""></td>
+           
+        </tr>
+        <tr>
+            <td class="editable"><input type="text" value=""></td>
+            <td class="editable"><input type="text" value=""></td>
+           
+        </tr>
+        <tr>
+            <td class="editable"><input type="text" value=""></td>
+            <td class="editable"><input type="text" value=""></td>
+           
+        </tr>
+        <tr>
+            <td class="editable"><input type="text" value=""></td>
+            <td class="editable"><input type="text" value=""></td>
+           
+        </tr>
+
     </table>
-    
     
     <script>
         const editableCells = document.querySelectorAll('.editable');
