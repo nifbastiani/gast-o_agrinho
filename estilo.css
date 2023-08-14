@@ -49,6 +49,7 @@ body {
     
     .calc {
         background: rgb(78, 132, 168);
+        align-items: center;
         color: aliceblue;
         width: 200px;
         padding: 30px;
